@@ -8,18 +8,52 @@
 <body>
     <main>
         <form action="#">
-            <div class="form-input-card product-title">
-                <label for="productName">Título del producto</label>
-                <input type="text" name="productName"  id="productName" />
-            </div>
-            <div class="form-input-card brand-radio">
-                <label for="productBrand">Marca del producto</label>
-                <input type="radio" name="Klatter" id="productBrand">
-            </div>
-            <div class="form-input-card product-radio">
-                <label for="productWheel">Rodado del producto</label>
-                <input type="numer" name="productWheel" id="productWheel">
-            </div>
+            <fieldset>
+                <legend>Carga de productos</legend>
+                <ul>
+                     <li class="form-input-card product-title">
+                        <label for="productName">Título del producto</label>
+                        <input type="text" name="productName"  id="productName" />
+                    </li>
+                    <li class="form-input-card brand-radio">
+                        <label for="productBrand">Marca del producto</label>
+                        <select name="productBrand" id="productBrand">
+                            <option value="klatter">Klatter</option>
+                            <option value="topMega">Top Mega</option>
+                            <option value="fierce">Fierce</option>
+                            <option value="shimano">Shimano</option>
+                            <option value="lamborghini">Lamborghini</option>
+                            <option value="aurora">Aurora</option>
+                            <option value="gt">GT</option>
+                        </select>
+                        
+                    </li>
+                    <li class="form-input-card product-radio">
+                        <label for="productWheel">Rodado del producto</label>
+                        <input type="numer" name="productWheel" id="productWheel">
+                    </li>
+                    <li>
+                        <div class="radio-container">
+                           <label for="productCategoryMountain">Mountain Bike</label>
+                            <input type="radio" value="mountainBike" id="productCategoryMountain" name="productCategory" /> 
+                        </div>
+                        <div class="radio-container">
+                            <label for="productCategoryPaseo">Paseo</label>
+                            <input type="radio" value="paseo" id="productCategoryPaseo" name="productCategory" /> 
+                         </div>
+                         <div class="radio-container">
+                            <label for="productCategoryPlegable">Plegable</label>
+                             <input type="radio" value="plegable" id="productCategoryPlegable" name="productCategory" /> 
+                         </div>
+                         <div class="radio-container">
+                            <label for="productCategoryCarrera">Carrera</label>
+                             <input type="radio" value="carrera" id="productCategoryCarrera" name="productCategory" /> 
+                         </div>
+                    </li>
+                </ul>
+                <textarea name="productDescription" placeholder="Descripción del producto" cols="60" rows="10"></textarea>
+            </fieldset>
+           <button type="submit">Cargar</button>
         </form>
     </main>
 </body>
